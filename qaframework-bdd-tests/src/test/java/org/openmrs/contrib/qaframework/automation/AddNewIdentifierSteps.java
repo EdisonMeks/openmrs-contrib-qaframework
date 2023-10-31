@@ -65,7 +65,7 @@ public class AddNewIdentifierSteps extends Steps {
         patientFormPage.addNewIdentifier();
     }
 
-    @And("a user mentions preferred identifier, identifier type and location")
+    @And("a user mentions preferred, identifier, identifier type and location")
     public void fillNewIdentifierForm() {
         patientFormPage.selectPreferred();
         patientFormPage.setIdentifier(IDENTIFIER);
