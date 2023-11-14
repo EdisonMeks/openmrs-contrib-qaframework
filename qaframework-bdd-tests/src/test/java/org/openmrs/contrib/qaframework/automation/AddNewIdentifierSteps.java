@@ -52,12 +52,12 @@ public class AddNewIdentifierSteps extends Steps {
 
     @When("a user searches for the patient")
     public void searchPatientIdentifierOrPatientName() {
-        managePatientPage.searchPatientIdentifierOrPatientName(firstPatientIdentifier);
+        managePatientPage.searchPatientIdentifierOrPatientName("john");
     }
 
     @And("a user selects returned patient")
     public void selectReturnedPatient(){
-        dashboardPage = findPatientPage.clickOnFirstPatient();
+        managePatientPage.clickOnFirstPatient("john");
     }
 
     @And("a user clicks on add new identifier")

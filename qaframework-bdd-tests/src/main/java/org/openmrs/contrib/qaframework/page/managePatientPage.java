@@ -23,4 +23,8 @@ public class managePatientPage extends Page{
         findElement(SEARCH_ELEMENT).sendKeys(Keys.BACK_SPACE);
         waitForTextToBePresentInElement(SEARCH_STATUS,text.substring(0, text.length() - 1));
     }
+    public void clickOnFirstPatient(String text) {
+        setText(SEARCH_ELEMENT, text);
+        clickOn(By.cssSelector("#openmrsSearchTable > tbody > tr:nth-child(2)"));
+    }
 }
